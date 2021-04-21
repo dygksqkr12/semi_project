@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+/* BoardList */
+#boardListWrapper {
+	width: 800px;
+	height: 350px;
+	margin: 0 auto;
+}
+
+#btn-add {
+	float: right;
+	margin: 0 0 15px;
+}
+
+#btn-add:hover{
+	cursor: pointer;
+}
+
+#tbl-board {
+	font-size: 15px;
+	clear: both;
+}
+
+#tbl-board td:nth-of-type(1) {
+	width: 50px;
+	border: 1px solid black;
+}
+
+#tbl-board td:nth-of-type(2) {
+	width: 550px;
+	padding-left : 20px;
+	text-align:left;
+	border: 1px solid black;
+}
+
+#tbl-board td:nth-of-type(3) {
+	width: 100px;
+	border: 1px solid black;
+}
+
+#tbl-board td:nth-of-type(4) {
+	width: 100px;
+	border: 1px solid black;
+}
+.cPage{
+	margin-right: 7px;
+}
+
+
+/* boardEnroll */
+#enroll_title{
+	width: 1200px; 
+	height: 50px; 
+	font-size: 20px;
+}
+#enroll_summerNoteWrapper{
+	margin: 0 auto; 
+	text-align: left
+}
+
+/* boardView */
+#boardViewDesc div:nth-of-type(1) {
+	margin-left: 20px;
+	text-align: left;
+}
+#boardViewDesc div:nth-of-type(2) {
+	text-align: right;
+}
+#boardViewRegDate{
+	font-size: x-small;
+	font-weight: bold;
+}
+#boardViewWriter{
+	font-weight: bold;
+}
+#boardViewContent{
+	text-align:left;
+}
+#boardViewNav{
+	text-align:left;
+}
+#boardViewImg{
+	cursor: pointer;
+}
+#boardViewRe{
+	clear:both;
+	min-height: 200px;
+}
+#boardViewBtnUpdate, #boardViewBtnDelete{
+	float:right;
+	cursor: pointer;
+}
+
+div#boardViewRe #btn-insert{width:60px; height:50px; color:white; background:#3300ff; position:relative; top:-20px;}
+
+table#tbl-comment{width:580px; margin:0 auto; border-collapse:collapse; } 
+table#tbl-comment tr td{border-bottom:1px solid; border-top:1px solid white; padding:5px; text-align:left; line-height:120%;}
+table#tbl-comment tr td:first-of-type {padding: 5px 5px 5px 50px;}
+table#tbl-comment tr td:last-of-type {text-align:right; width: 100px;}
+table#tbl-comment button.btn-reply{display:none;}
+table#tbl-comment tr:hover {background:lightyellow;}
+table#tbl-comment tr:hover button.btn-reply{display:inline;}
+table#tbl-comment sub.comment-writer {color:navy; font-size:14px}
+table#tbl-comment sub.comment-date {color:tomato; font-size:10px}
+table#tbl-comment tr.level2 {color:gray; font-size: 14px;}
+table#tbl-comment tr.level2 td:first-of-type{padding-left:100px; text-align:left;}
+table#tbl-comment tr.level2 sub.comment-writer {color:#8e8eff; font-size:14px}
+table#tbl-comment tr.level2 sub.comment-date {color:#ff9c8a; font-size:10px}
+
+
+table#tbl-comment button.btn-delete{background:red; color:white; display:none;}
+table#tbl-comment tr:hover button.btn-delete{display:inline;}
+textarea{
+	resize:none;
+}
+
+#pageBar{
+	height:50px;
+}
+
+#pageBar span{
+    border-radius: 15%;
+    padding: 9px 15px;
+    background-color: skyblue;
+    text-decoration: none;
+    color: white;
+}
+#pageBar a{
+	border-radius: 15%;
+    padding: 9px 15px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+#pageBar a:hover{
+    background-color: skyblue;
+    color: white;
+    transition: all ease 0.5s;
+}
+
+#pageBar a:active{
+    background-color: skyblue;
+    color: gray;
+}
