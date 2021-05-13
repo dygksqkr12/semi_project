@@ -75,6 +75,7 @@ List<Meeting> list = (List<Meeting>) request.getAttribute("list");
 		--%>
 		<%-- 수정!!! --%>
 		<table class="meet">
+			
 			<tr>
 		<%-- --%>
 			<% if(list != null) { 
@@ -92,11 +93,12 @@ List<Meeting> list = (List<Meeting>) request.getAttribute("list");
 				  }
 				} else { 
 			%>
+				</tr>
 			<tr>
 				<td colspan="6" style="text-align:center;">신청한 모임이 없습니다.</td>
 			</tr>
+			
 			<% } %>
-			</tr>
 			<%-- 
 			<tr>
 				<td class="box">

@@ -505,11 +505,23 @@ section{
     position: relative;
     margin: 105px auto;
 }
-.boardWrapper .board{
-	width:500px;
+.board{
+	width:550px;
 	height:500px;
-	border:1px solid red;
+	border:1px solid lightgray;
 	margin: 0 auto;
+	border-radius: 15px;
+	position: absolute;
+	left: 0;
+}
+.board2{
+	width:550px;
+	height:500px;
+	border:1px solid lightgray;
+	margin: 0 auto;
+	border-radius: 15px;
+	position: absolute;
+	right: 0;
 }
 #userBoard, #adminBoard{
 	text-align:left;

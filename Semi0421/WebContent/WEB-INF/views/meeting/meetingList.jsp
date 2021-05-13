@@ -5,7 +5,8 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/css/meetingList.css" />
 <%@ include file="/WEB-INF/views/common/header.jsp"%>
 <%
 	List<Meeting> list = (List<Meeting>)request.getAttribute("list");
@@ -57,16 +58,17 @@
 
 <div id="listWrapper">
 	<div id="leftWrapper">
-		<h4><%= cName+" > "+lName%></h4>
+		<div class="leftName">
+			<h4><%= cName+" > "+lName%></h4>
+		<div class="leftName">
 		<%
 			if(search.length()!=0){
 		%>
 			<h4>제목 검색 : <%=search %></h4>
 			<button type="button" onclick="location.href='<%=request.getContextPath()%>/meeting/meetingList?category=<%=category%>&location=<%=location%>'">초기화</button>	
 		<%}%>
-		<hr />
 		<div>
-			<h4>지역</h4>
+			<h3 class="leftATag">지역</h3>
 		</div>
 		<ol>
 			<li><a href="<%=request.getContextPath()%>/meeting/meetingList?category=<%=category%>&search=<%=search%>">전국</a></li>
@@ -82,7 +84,7 @@
 	</div>
 	
 	<div id="rightWrapper">
-		<h3>미플 모임</h3>
+		<h2>미플 모임</h2>
 		<div id="search">
 			<input type="text" name="" id="searchKeyword" placeholder="검색할 키워드를 입력하세요!"/>
 			<button type="button" id="searchBtn">검색</button>
@@ -193,71 +195,6 @@
 		</div>
 	</div>
 </div>
-<style>
-		.boxWrapper{
-			width:900px;
-			height:194px;
-			display: flex;
-			transition-duration: 1s;
-			transition-timing-function: ease;
-			margin:0 auto;
-		}
-		.boxContents{
-			position:relative;
-			width:220px;
-			height:150px;
-			margin:40px;
-			padding:0;
-			border:2px solid black;
-			border-radius: 5px;
-			background:black;
-		}
-		.boxContents:hover{
-			animation-name: ani;
-			animation-duration: 0.5s;
-			animation-iteration-count: infinite;
-			animation-timing-function: ease;
-		}
-		.boxContents:hover span{
-			color:black;
-			text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
-		}
-		@keyframes ani{
-			0%{
-				transform: scale(1, 1);
-			}
-			50%{
-				transform: scale(1.1, 1.1);
-			}
-			100%{
-				transform: scale(1, 1);
-			}
-		}
-		.boxContents span{
-			position:absolute;
-			bottom:8px;
-			right:8px;
-			color:white;
-			font-weight: bold;
-			text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-		}
-		#dDay{
-			top:8px;
-			right:8px;
-			color:red;
-		}
-		.boxContents img{
-			border-radius: 10px;
-		}
-		section{
-			overflow: hidden;
-		}
-		#search{
-			position: absolute;
-			right:10px;
-			top:21px;
-		}
-</style>
 
 <script>
 	$("#searchBtn").click(function(){
@@ -271,66 +208,4 @@
 		<% } %>
 	});
 </script>
-<style>
-#listWrapper{
-	width:1200px;
-	display:flex;
-}
-#leftWrapper{
-	width:200px;
-	height:800px;
-	margin-left:50px;
-	border:1px solid red;
-}
-#rightWrapper{
-	clear:both;
-	width:900px;
-	min-height: 800px;
-	border:1px solid red;
-	position: relative;
-}
-#leftWrapper ol{
-	list-style: none;
-	margin:0;
-	padding-left:30px;
-	text-align:left;
-}
-#leftWrapper ol li{
-	margin-bottom:20px;	
-}
-
-#pageBar{
-	height:50px;
-	margin-top:30px;
-}
-
-#pageBar span{
-    border-radius: 15%;
-    padding: 9px 15px;
-    background-color: skyblue;
-    text-decoration: none;
-    color: white;
-}
-#pageBar a{
-	border-radius: 15%;
-    padding: 9px 15px;
-    background-color: white;
-    text-decoration: none;
-    color: black;
-}
-
-#pageBar a:hover{
-    background-color: skyblue;
-    color: white;
-    transition: all ease 0.5s;
-}
-
-#pageBar a:active{
-    background-color: skyblue;
-    color: gray;
-}
-#search{
-	disdplay:flex;
-}
-</style>
 <%@ include file="/WEB-INF/views/common/footer.jsp"%>

@@ -102,7 +102,7 @@ pageEncoding="UTF-8"%>
 			</div>
 		</div>	
 		
-		<div class="board">
+		<div class="board2">
 			<h3>공지사항</h3>
 			<div id="adminBoard">
 			</div>
